@@ -1,4 +1,4 @@
-const makeItModular = require('./mymodule.js');
+const makeItModular = require('./make-it-modular-mymodule');
 
 function callbackModulo(err, data){
     if (err === null){
