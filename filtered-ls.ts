@@ -1,13 +1,42 @@
-const fs = require('fs');
+
+
+let fs = require("node:fs/promises");
 
 let finalList: string[] = [];
 
-fs.readdir(process.argv[2],(err,list)=>{
-    if (err) throw err;
-    for(let i=0;i<list.length;i++){
-        if (list[i].includes("."+process.argv[3])){
-            finalList.push(list[i]);
-        }
+async function readdirFunc(){
+    try{
+
+        let list = await fs.readdir(process.argv[2])
+
+        for(let i=0;i<list.length;i++){
+                            if (list[i].includes("."+process.argv[3])){
+                                finalList.push(list[i]);
+                            }
+                        }
+                        
+                         console.log(finalList.join("\n"));
+                         return finalList;
+    }catch(err){
+        throw err;
     }
-    console.log(finalList.join("\n"));
-})
+}
+
+
+
+let arrayPromesa = readdirFunc()
+
+
+
+module.exports = {arrayPromesa} 
+    
+
+
+
+
+
+
+
+
+
+

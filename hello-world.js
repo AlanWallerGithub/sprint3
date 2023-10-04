@@ -1,1 +1,4 @@
-console.log("HELLO WORLD");
+"use strict";
+let mensaje = "HELLO WORLD";
+console.log(mensaje);
+module.exports = { mensaje };
