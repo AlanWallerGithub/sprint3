@@ -1,13 +1,13 @@
 {
   "name": "sprint3",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sprint 3 del IT Academy con Nodejs",
   "main": "baby-steps.js",
   "scripts": {
     "test": "jest"
   },
   "keywords": [],
-  "author": "",
+  "author": "Alan Waller Ordóñez",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.8.0",
