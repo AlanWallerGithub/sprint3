@@ -6,6 +6,14 @@
 Para ejecutar este nivel, hace falta descargar learnyounode con npm install -g learnyounode. Esta web habla de ello:
 https://github.com/workshopper/learnyounode
 
+NOTA: Uno de los archivos no da "PASS" en LearnYouNode, pero sí da los resultados correctos. Es el archivo "make-it-modular.js":
+
+![image](https://github.com/AlanWallerGithub/sprint3/assets/140154835/a0214d62-b8a2-420a-8e15-581469c94af1)
+
+Sí conseguí que diera "PASS" la primera vez que lo escribí. Pero reescribí todos los archivos luego con promesas, para realizar los tests, y parece que esto ya no lo consigue aceptar.
+
+// Fin de la nota, explicación del nivel 1 aquí ya:
+
 Los archivos JS que tienen el mismo nombre que los ejercicios son los archivos que se pueden ejecutar con LearnYouNode. Por ejemplo "http-client.js". Hay otros archivos JS que sirven para el nivel 2, como servidores falsos que no usan LearnYouNode, estos se llaman cosas como "http-client-webFalsa.js". He intentado que su nombre siempre empiece con el nombre del archivo, como "http-client... bla bla", para que se guarden juntos en la carpeta.
 
 ## NIVEL 2
