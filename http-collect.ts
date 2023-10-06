@@ -2,20 +2,35 @@
 
 const http = require('http');
 
-function callbackModulo (response){
-    let finalData = "";
-    response.on('data', function (data) { 
-        finalData += data.toString('utf8');
-     })
-     response.on('error', function (error) {
-        console.error(error);
-     })
-     response.on('end', function () {
-        console.log(finalData.length)
-        console.log(finalData)
-    })
-     
-     
+const httpCollect = (port: String) =>{
+    return new Promise ((resolve, reject)=>{
+        http.get(port,function (response){
+            let finalData = "";
+            response.on('data', function (data) { 
+                finalData += data.toString('utf8');
+             })
+             response.on('end', function () {
+                try {
+                    // No hago nada aquí
+
+                }catch(err){
+
+                   reject(new Error (err)) 
+                }
+                console.log(finalData.length)
+                console.log(finalData)
+                resolve(finalData)
+            })  
+            response.on('error', reject)
+             
+        })
+
+
+})
 }
 
-http.get(process.argv[2],callbackModulo)
+httpCollect(process.argv[2])
+
+
+module.exports = {httpCollect} 
+

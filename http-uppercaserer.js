@@ -13,3 +13,5 @@ const server = http.createServer(function (req, res) {
     }
 });
 server.listen(process.argv[2]);
+let confirmacion = server.listening;
+module.exports = { server, confirmacion };

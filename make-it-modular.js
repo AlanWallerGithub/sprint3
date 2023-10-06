@@ -8,4 +8,5 @@ function callbackModulo(err, data) {
         return console.log("Ha habido un error");
     }
 }
-makeItModular(process.argv[2], process.argv[3], callbackModulo);
+let dataPromesa = makeItModular(process.argv[2], process.argv[3], callbackModulo);
+module.exports = { dataPromesa };

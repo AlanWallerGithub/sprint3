@@ -2,7 +2,7 @@
 
 const http = require('http');
 
-const httpGet = port =>{
+const httpGet = (port: String) =>{
     return new Promise ((resolve, reject)=>{
         http.get(port,function(res){
             let bodyFinal = "";

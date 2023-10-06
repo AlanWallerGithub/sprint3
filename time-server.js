@@ -23,3 +23,5 @@ const server = net.createServer(function (socket) {
     socket.end();
 });
 server.listen(process.argv[2]);
+let confirmacion = server.listening;
+module.exports = { server, confirmacion };

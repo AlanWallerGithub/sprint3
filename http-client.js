@@ -1,6 +1,6 @@
 "use strict";
 const http = require('http');
-const httpGet = port => {
+const httpGet = (port) => {
     return new Promise((resolve, reject) => {
         http.get(port, function (res) {
             let bodyFinal = "";

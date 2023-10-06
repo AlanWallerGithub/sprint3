@@ -2,15 +2,15 @@
 
 const http = require('http');
  
-const hostname = '127.0.0.3';
-const port = 8080;
+const hostname = '127.0.0.1';
+const port = 4040;
  
-const server = http.createServer((req, res) => {
+const server3 = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
   res.end(`Tercer mensaje`);
 });
  
-server.listen(port, hostname, () => {
+server3.listen(port,hostname, () => {
   console.log(`Web falsa es http://${hostname}:${port}/`);
 });

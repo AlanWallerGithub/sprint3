@@ -2,6 +2,8 @@
 
 const makeItModular = require('./make-it-modular-mymodule');
 
+
+
 function callbackModulo(err, data){
     if (err === null){
         console.log(data.join("\n"));
@@ -11,4 +13,8 @@ function callbackModulo(err, data){
     }
 }
 
-makeItModular(process.argv[2],process.argv[3],callbackModulo);
+let dataPromesa = makeItModular(process.argv[2],process.argv[3],callbackModulo);
+
+
+
+module.exports = {dataPromesa} 

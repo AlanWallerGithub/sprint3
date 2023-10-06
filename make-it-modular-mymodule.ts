@@ -1,12 +1,14 @@
-
-
-function makeItModular(dirName,fileName,callback){
-    const fs = require('fs');
+let fs = require("node:fs/promises");
 
     let finalList: string[] = [];
+
+async function makeItModular(dirName,fileName,callback){
     
-    fs.readdir(dirName,(err,list)=>{
-        if (err) return callback(err);
+
+    try{
+        let list = await fs.readdir(dirName);
+
+        
         for(let i=0;i<list.length;i++){
             if (list[i].includes("."+fileName)){
                 finalList.push(list[i]);
@@ -14,8 +16,12 @@ function makeItModular(dirName,fileName,callback){
         }
         
         callback(null, finalList)
-        
-    })
+        return finalList;
+    }catch(err){
+        throw err;
+
+    }
+    
 }
 
 module.exports = makeItModular;
