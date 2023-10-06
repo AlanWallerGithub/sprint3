@@ -3,6 +3,9 @@
 ---
 ## NIVEL 1
 
+Para ejecutar este nivel, hace falta descargar learnyounode con npm install -g learnyounode. Esta web habla de ello:
+https://github.com/workshopper/learnyounode
+
 Los archivos JS que tienen el mismo nombre que los ejercicios son los archivos que se pueden ejecutar con LearnYouNode. Por ejemplo "http-client.js". Hay otros archivos JS que sirven para el nivel 2, como servidores falsos que no usan LearnYouNode, estos se llaman cosas como "http-client-webFalsa.js". He intentado que su nombre siempre empiece con el nombre del archivo, como "http-client... bla bla", para que se guarden juntos en la carpeta.
 
 ## NIVEL 2
