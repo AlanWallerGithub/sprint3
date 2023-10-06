@@ -26,9 +26,8 @@ NOTA: cuando pido que se ejecute más de un archivo a la vez, se deben ejecutar 
 - "time-server.js": primero ejecuta "time-server.js" con un número de "port" de "3330", es decir "node time-server.js 3330", y luego ejecuta sin argumento el "time-server-clienteFalso.js" para ver tu resultado.
 - "http-file-server.js": ejecuta "node http-file-server.js" con "4000" como primer argumento y "./http-file-server-texto.txt" como el segundo. Dirígete a la web "localhost:4000" en tu navegador.
 - "http-uppercaserer.js": ejecuta "node http-uppercaserer.js 3000" y luego en otro terminal, ejecuta el archivo "http-uppercaserer-post.js" para el POST.
-- "http-json-api-server.js": ejecuta "http-json-api-server.js 5000" y luego busca las webs "http://127.0.0.1:5000/api/parsetime?iso=2013-08-10T12:10:15.474Z" y "http://127.0.0.1:5000/api/unixtime?iso=2013-08-10T12:10:15.474Z" en tu navegador.
+- "http-json-api-server.js": ejecuta "http-json-api-server.js 5000" y luego busca las webs "http://127.0.0.1:5000/api/parsetime?iso=2013-08-10T12:10:15.474Z" y "http://127.0.0.1:5000/api/unixtime?iso=2013-08-10T12:10:15.474Z" en tu navegador. Verás las horas transformadas.
 
 ## NIVEL 3
 
-En la carpeta ‘debounce_nivel3’, el archivo ‘debounce.html’ abre una web que imprime ‘COMPRA REALIZADA en la web cada vez que pulsas el botón ‘COMPRAR’. Esta impresión solo aparecerá cuando haya pasado 1 segundo desde tu último clic, en caso de que pulses a un ritmo más rápido que ese.
-Si en el código modificaras la llamada a la función memoize y aplicaras un callback que no fuese una función, este error se imprimiría en pantalla.
+Para este nivel, he añadido Promesas a casi todos los archivos, porque así puedo extraer los datos que necesito para realizar los tests. Esto no debería afectar los anteriores niveles. He usado "port numbers" distintos en los tests que en los archivos del nivel 2, disculpas por ello. He recreado algunos servidores directamente en Jest porque al importar las "webFalsa" no me funcionaba.
