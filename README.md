@@ -12,6 +12,7 @@ NOTA: Uno de los archivos no da "PASS" en LearnYouNode, pero sí da los resultad
 
 Sí conseguí que diera "PASS" la primera vez que lo escribí. Pero reescribí todos los archivos luego con promesas, para realizar los tests, y parece que esto ya no lo consigue aceptar.
 
+// Fin de la nota, explicación del nivel 1 aquí ya:
 
 Los archivos JS que tienen el mismo nombre que los ejercicios son los archivos que se pueden ejecutar con LearnYouNode. Por ejemplo "http-client.js". Hay otros archivos JS que sirven para el nivel 2, como servidores falsos que no usan LearnYouNode, estos se llaman cosas como "http-client-webFalsa.js". He intentado que su nombre siempre empiece con el nombre del archivo, como "http-client... bla bla", para que se guarden juntos en la carpeta.
 
