@@ -1,5 +1,7 @@
 # SPRINT 3
 
+Uso la versión 20.8.0 de node.js en este sprint!
+
 ---
 ## NIVEL 1
 
@@ -42,3 +44,9 @@ NOTA: cuando pido que se ejecute más de un archivo a la vez, se deben ejecutar 
 ## NIVEL 3
 
 Para este nivel, he añadido Promesas a casi todos los archivos, porque así puedo extraer los datos que necesito para realizar los tests. Esto no debería afectar los anteriores niveles. He usado "port numbers" distintos en los tests que en los archivos del nivel 2. He recreado algunos servidores directamente en Jest porque al importar las "webFalsa" no funcionaba. Espero que con eso lo explique todo.
+
+El archivo "http-json-api-server.test.js" da PASS en mi máquina, pero no da pass en el GithubActions workflow. Este archivo recoge una fecha, con hora, minutos, etc, desde el new Date.
+```javascript
+new Date() 
+```
+LearnYouNode interpretaba ese new Date en una zona horaria distinta a la mía, y tuve que modificar el código para que pasara. Imagino que por eso no pasa en GitHub Actions. No sé muy bien cómo hacer que pase en ambos.
