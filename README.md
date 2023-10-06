@@ -30,4 +30,4 @@ NOTA: cuando pido que se ejecute más de un archivo a la vez, se deben ejecutar 
 
 ## NIVEL 3
 
-Para este nivel, he añadido Promesas a casi todos los archivos, porque así puedo extraer los datos que necesito para realizar los tests. Esto no debería afectar los anteriores niveles. He usado "port numbers" distintos en los tests que en los archivos del nivel 2, disculpas por ello. He recreado algunos servidores directamente en Jest porque al importar las "webFalsa" no me funcionaba.
+Para este nivel, he añadido Promesas a casi todos los archivos, porque así puedo extraer los datos que necesito para realizar los tests. Esto no debería afectar los anteriores niveles. He usado "port numbers" distintos en los tests que en los archivos del nivel 2. He recreado algunos servidores directamente en Jest porque al importar las "webFalsa" no funcionaba. Espero que con eso lo explique todo.
